@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabaseClient } from '@/lib/supabase-server'
 import { format } from 'date-fns'
 
+export const dynamic = 'force-dynamic'
+
 function escapeCSV(value: string | number | null | undefined): string {
   if (value == null) return ''
   const str = String(value)
